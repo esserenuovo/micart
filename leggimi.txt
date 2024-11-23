@@ -1,0 +1,161 @@
+Visual Studio CODE
+------------------------
+
+Estensioni:
+GitHub Pull Requests    v0.100.3
+
+
+Git
+------------------------
+sudo apt install git
+
+git version         (2.39.5)
+
+git config --global user.name "esserenuovo"
+git config --global user.email "maspud@hotmail.com"
+
+
+Node.js
+------------------------
+Installare nvm, versione attuale 0.40.0
+
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+
+Chiudere e riaprire il terminale
+
+nvm install 22      (22.11.0) oppure: nvm install latest
+
+node -v
+
+Angular
+------------------------
+npm install -g @angular/cli
+
+cd /Progetti/micart/front-end
+
+ng new micart -S
+
+cd micart
+
+npm start
+
+q + enter
+
+
+Angular Material
+------------------------
+ng add @angular/material
+
+https://material.angular.io?theme=azure-blue
+
+npm start
+
+
+Java
+------------------------
+https://download.oracle.com/java/23/latest/jdk-23_linux-x64_bin.deb
+
+java -version
+
+Spring
+------------------------
+https://start.spring.io/
+
+
+
+PostGreSQL
+------------------------
+sudo apt install -y postgresql-common
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+
+sudo apt update
+
+sudo apt install postgresql
+sudo apt install postgresql-client
+
+https://wiki.postgresql.org/wiki/Apt
+https://wiki.postgresql.org/wiki/Apt/FAQ
+
+https://www.tosolini.info/2020/09/linux-installare-e-configurare-postgresql/
+
+Per accedere alla command line del database per prima cosa dobbiamo cambiare utente:
+
+sudo -i -u postgres
+
+psql
+
+\q
+
+sudo -u postgres createuser --interactive  (massimiliano superuser)
+
+il passo successivo è quello di creare un database. Quello che consiglio è di avere una sorta di continuità logica, ovvero il nome utente deve essere uguale al nome del database.
+
+sudo -u postgres createdb micart
+
+sudo -u postgres createuser --interactive (micart superuser)
+
+Ctrl+Alt+F4
+micart
+67maXpud
+
+psql
+\conninfo
+CREATE TABLE prova ( id serial PRIMARY KEY);
+\d
+exit
+
+Ctrl+Alt+F7 per tornare alla modalità grafica
+
+
+
+Aprire il file:
+/etc/postgresql/17/main/postgresql.conf
+Cercare al suo interno data_directory, che specifica dove vengono salvati i database:
+/var/lib/postgresql/17/main
+
+
+listen_addresses = 'localhost'
+port = 5432
+
+
+
+
+
+
+
+
+
+
+
+
+pgAdmin4
+------------------------
+https://www.pgadmin.org/download/pgadmin-4-apt/
+
+# Installare la chiave pubblica per il repository (se non è stato fatto in precedenza):
+
+curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+
+# Crea il file di configurazione del repository:
+
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+
+# Installa pgAdmin4 solo per la modalità desktop:
+
+sudo apt install pgadmin4-desktop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
