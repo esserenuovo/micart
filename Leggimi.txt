@@ -107,7 +107,6 @@ exit
 Ctrl+Alt+F7 per tornare alla modalità grafica
 
 
-
 Aprire il file:
 /etc/postgresql/17/main/postgresql.conf
 Cercare al suo interno data_directory, che specifica dove vengono salvati i database:
@@ -116,16 +115,6 @@ Cercare al suo interno data_directory, che specifica dove vengono salvati i data
 
 listen_addresses = 'localhost'
 port = 5432
-
-
-
-
-
-
-
-
-
-
 
 
 pgAdmin4
@@ -143,19 +132,5 @@ sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] h
 # Installa pgAdmin4 solo per la modalità desktop:
 
 sudo apt install pgadmin4-desktop
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
