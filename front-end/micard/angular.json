@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "micart": {
+    "micard": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/micart",
+            "outputPath": "dist/micard",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -67,8 +67,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
                 }
               ],
               "outputHashing": "all"
@@ -85,10 +85,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "micart:build:production"
+              "buildTarget": "micard:build:production"
             },
             "development": {
-              "buildTarget": "micart:build:development"
+              "buildTarget": "micard:build:development"
             }
           },
           "defaultConfiguration": "development"

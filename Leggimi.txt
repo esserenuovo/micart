@@ -1,6 +1,11 @@
 Visual Studio CODE
 ------------------------
 
+Estensioni:
+- Angular Language Service  v19.0.2 Angular
+- Angular Snippets          v18.0.2 John Papa
+- Material Icon Theme       v5.14.1 Philipp Kief
+
 
 
 Git
@@ -12,12 +17,38 @@ git version         (2.39.5)
 git config --global user.name "esserenuovo"
 git config --global user.email "maspud@hotmail.com"
 
+Git: Guida per principianti (terminale, visual studio code e Github)
+https://www.youtube.com/watch?v=CJunErtZPRM
 
+CREARE un repository vuoto con nome micart senza README.md
+
+Da dentro la cartella /home/massimiliano/Progetti/micart/
+
+git init
+
+git add *.*
+git add front-end/
+
+# git add <file>
+
+git status
+git branch -a
+git branch -m main
+
+git remote add origin https://github.com/esserenuovo/micart.git
+git push -u origin main
+
+
+Configurazione rapida: se hai già fatto questo tipo di cose
 https://github.com/esserenuovo/micart.git
+Inizia da:
+- Creazione di un nuovo file (https://github.com/esserenuovo/micart/new/main) 
+o 
+- Caricamento di un file esistente (https://github.com/esserenuovo/micart/upload). 
+oppure:
 
 …or create a new repository on the command line
 
-echo "# micart" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
@@ -40,13 +71,32 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
 
 Chiudere e riaprire il terminale
 
-nvm install 22      (22.11.0) oppure: nvm install latest
+    nvm install 22      (22.11.0) 
 
 node -v
 
+nvm which node
+/home/massimiliano/.nvm/versions/node/v22.11.0/bin/node
+
+nvm which default
+/home/massimiliano/.nvm/versions/node/v22.11.0/bin/node
+
+
 Angular
 ------------------------
-npm install -g @angular/cli
+Angular 	        Node.js 	                        TypeScript 	    RxJS
+19.0.x 	            ^18.19.1 || ^20.11.1 || ^22.0.0 	>=5.5.0 <5.7.0 	^6.5.3 || ^7.4.0
+18.1.x || 18.2.x 	^18.19.1 || ^20.11.1 || ^22.0.0 	>=5.4.0 <5.6.0 	^6.5.3 || ^7.4.0
+18.0.x 	            ^18.19.1 || ^20.11.1 || ^22.0.0 	>=5.4.0 <5.5.0 	^6.5.3 || ^7.4.0
+
+Version 	Status 	Released 	Active ends     LTS ends
+^19.0.0 	Active 	2024-11-19 	2025-05-19 	    2026-05-19
+^18.0.0 	LTS 	2024-05-22 	2024-11-19 	    2025-11-19
+^17.0.0 	LTS 	2023-11-08 	2024-05-08 	    2025-05-15
+
+npm install -g @angular/cli@18
+
+ng --version    (18.2.12)
 
 cd /Progetti/micart/front-end
 
@@ -58,6 +108,9 @@ npm start
 
 q + enter
 
+////////////////////////
+npm uninstall -g @angular/cli
+npm cache clean --force
 
 Angular Material
 ------------------------
@@ -66,6 +119,38 @@ ng add @angular/material
 https://material.angular.io?theme=azure-blue
 
 npm start
+////////////////////////
+npm uninstall angular/material
+
+Angular NgRx da installare per la versione 18 di Angular
+------------------------
+ng add @ngrx/store@latest   (18.1.1)
+o
+npm install @ngrx/store --save
+
+
+Angular CLI: 18.2.12
+Node: 22.11.0
+Package Manager: npm 10.9.0
+OS: linux x64
+
+Angular: 18.2.12
+... animations, cli, common, compiler, compiler-cli, core, forms
+... platform-browser, platform-browser-dynamic, router
+
+Package                         Version
+---------------------------------------------------------
+@angular-devkit/architect       0.1802.12
+@angular-devkit/build-angular   18.2.12
+@angular-devkit/core            18.2.12
+@angular-devkit/schematics      18.2.12
+@angular/cdk                    18.2.14
+@angular/material               18.2.14
+@schematics/angular             18.2.12
+rxjs                            7.8.1
+typescript                      5.5.4
+zone.js                         0.14.10
+
 
 
 Java
@@ -113,7 +198,7 @@ sudo -u postgres createuser --interactive (micart superuser)
 
 Ctrl+Alt+F4
 micart
-67maXpud
+6?!!X!!d
 
 psql
 \conninfo
