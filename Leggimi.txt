@@ -44,10 +44,19 @@ Per tornare indietro nelle modifiche:
 
 git log
 git reset HEAD~    
-Questo comando dice a git di lasciare la nostra directory di lavoro com’era prima dell’ultimo commit e lo annulla. A questo punto riavrete i file come unstaged proprio come se fossimo tornati in dietro nel tempo. A questo punto eseguiamo le modifiche che desideriamo.
+Questo comando dice a git di lasciare la nostra directory di lavoro com’era prima dell’ultimo commit e 
+lo annulla. A questo punto riavrete i file come unstaged proprio come se fossimo tornati in dietro nel 
+tempo. A questo punto eseguiamo le modifiche che desideriamo.
+
+git merge main
 
 
-
+- git branch                – elenca i branch locali
+- git branch -a             – elenca i branch remoti
+- git branch -d <branch>    – elimina il branch indicato, impedendo però l’eliminazione se sono presenti 
+                              commit non mergiati
+- git branch -D <branch>    – elimina il branch indicato senza verificare la presenza di commit non mergiati
+- git branch -m <branch>    – rinomina il branch corrente
 
 Configurazione rapida: se hai già fatto questo tipo di cose
 https://github.com/esserenuovo/micart.git
