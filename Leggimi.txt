@@ -33,10 +33,20 @@ git add front-end/
 
 git status
 git branch -a
-git branch -m main
+git branch -M main
+
+git commit -am "Base di partenza Angular"
 
 git remote add origin https://github.com/esserenuovo/micart.git
 git push -u origin main
+
+Per tornare indietro nelle modifiche:
+
+git log
+git reset HEAD~    
+Questo comando dice a git di lasciare la nostra directory di lavoro com’era prima dell’ultimo commit e lo annulla. A questo punto riavrete i file come unstaged proprio come se fossimo tornati in dietro nel tempo. A questo punto eseguiamo le modifiche che desideriamo.
+
+
 
 
 Configurazione rapida: se hai già fatto questo tipo di cose
